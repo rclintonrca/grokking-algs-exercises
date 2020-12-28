@@ -7,24 +7,27 @@ def find_middle(arr: list) -> int:
 
     return middle_index
 
-def binary_search(arr: list, val: int) -> int:
+def binary_search(arr: list, val: int, base_ix=0) -> int:
     "running binary search..."
     
+    if not arr:
+        return None
+
     middle_ix = find_middle(arr)
     middle_ix_value = arr[middle_ix]
 
     if val == middle_ix_value:
-        return middle_ix
+        return middle_ix + base_ix
 
     elif val > middle_ix_value:
-        return -1
+        arr_slice = arr[middle_ix + 1 : ]
+        return binary_search(arr_slice, val, base_ix=middle_ix+1)
 
     elif val < middle_ix_value:
-        return -1
+        arr_slice = arr[0:middle_ix]
+        return binary_search(arr_slice, val, base_ix=base_ix)
 
-    else:
-        return -1
 
 
 if __name__ == '__main__':
-    print("search")
+    pass

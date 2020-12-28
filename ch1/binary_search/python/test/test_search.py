@@ -10,7 +10,7 @@ fix_path()
 import search
 
 
-sorted_list = [0,1,2,3,4,5]
+sorted_list = [11,22,33,44,55]
 class TestCase(unittest.TestCase):
 
     def test_find_middle_event(self):
@@ -22,22 +22,35 @@ class TestCase(unittest.TestCase):
         self.assertEquals(ix, 1)    
     
     def test_find_value_simple(self):
-        print("found test")
+        print("found test")       
         ix = search.binary_search( [1,2,3], 2)
-
         self.assertEqual(ix, 1)
 
     def test_find_value_top_half(self):
+        val = 44
+        answer = 3
         print("found test")
-        ix = search.binary_search( sorted_list, 1)
+        ix = search.binary_search( sorted_list, val)
 
-        self.assertEqual(ix, 5)
+        print(f" ix: {ix}")
+        print(f" answer should be: {answer}")
+        print(sorted_list)
+
+
+        self.assertEqual(ix, answer)
     
     def test_find_value_bottom_half(self):
         print("found test")
-        ix = search.binary_search( sorted_list, 4)
+        val = 11
+        answer = 0
 
-        self.assertEqual(ix, 5)
+        ix = search.binary_search( sorted_list, val)
+
+        print(f" ix: {ix}")
+        print(f" answer should be: {answer}")
+        print(sorted_list)
+
+        self.assertEqual(ix, answer)
     
 
     def test_handle_no_value(self):
