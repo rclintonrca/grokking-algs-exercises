@@ -1,0 +1,14 @@
+{
+    "python.testing.unittestArgs": [
+        "/Users/randyclinton/sideprojects/grokking-algs-exercises/ch1/binary_search/python",
+        "-v",
+        "-s",
+        "./ch1/binary_search/python/test/",
+        "-p",
+        "test_*.py",
+        "--log-cli-level INFO"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true
+}
