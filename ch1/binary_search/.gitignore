@@ -1,3 +1,5 @@
 __pycache__/*
 *.pyc
 /ch1/binary_search/javascript/node_modules/*
+.DS_Store
+/ch1/binary_search/scala/search/.idea/libraries/*
