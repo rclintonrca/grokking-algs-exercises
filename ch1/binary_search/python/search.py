@@ -1,5 +1,6 @@
 import math
 
+
 def find_middle(arr: list) -> int:
     low = arr[0]
     high = arr[-1]
